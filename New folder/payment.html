@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="css\bootstrap.css.map">
+    <link rel="stylesheet" href="css\payment.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+    rel="stylesheet"/> <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css\all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">    
+        <a class="navbar-brand" href="#"><img src="Zahra store.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="shop.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">About us</a>
+            </li>
+            </ul>
+            <div class="wrapper">
+                <div class="search-input">
+                    <a href="" target="_blank" hidden></a>
+                    <input type="text" placeholder="Type To Search..">
+                    <div class="autocom-box">
+                  
+                    </div>
+                    <div class="icon"><i class='bx bx-search'></i></i></div>
+                </div>
+            </div>
+            <i class='bx bxs-shopping-bags' id="carticon"></i>
+            <i class='bx bx-user-circle'></i>
+            <div>
+              
+                </div>
+                
+        </div>
+        </div>
+    </nav>
+      
+<br>
+    <center><h2 style="color: rgb(250, 250, 250);">Please specify the location</h2></center>
+<br>
+  <center><div id="googleMap" style="width:100%;height:400px;"></div></center>  
+
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+<br>
+<br>
+
+<br>
+<center><h2 style="color: rgb(250, 250, 250);">Payment available by Visa</h2></center>
+<br>
+<br>
+
+
+ <section class="ui">
+            <div class="container-left">
+                <form id="credit-card" action="index.html">
+                    <div class="number-container">
+                        <label>Card Number</label>
+                        <input type="text" name="card-number" id="card-number" maxlength="19" placeholder="1234 5678 9101 1121"
+                        required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="name-container">
+                        <label>Holder</label>
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="zahra mohmad"
+                        required
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+                    <div class="infos-container">
+                        <div class="expiration-container">
+                            <label>Valid-thru</label>
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="02/40"
+                            required
+                            
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                        <div class="cvv-container">
+                            <label>CVV</label>
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234"
+                            required
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                    </div>
+                     <input type="button" value="ADD" id="add"  onclick="newDoc()">
+                </form>
+            </div>
+            <div class="container-right">
+                <div class="card">
+                    <div class="intern">
+                        <img class="approximation" src="imgs\aprox.png "   >
+                        <div class="card-number">
+                            <div class="number-vl">1234 5678 9101 1121</div>
+                        </div>
+                        <div class="card-holder">
+                            <label>Holder</label>
+                            <div class="name-vl">zahra mohmad</div>
+                        </div>
+                        <div class="card-infos">
+                            <div class="exp">
+                                <label>valid-thru</label>
+                                <div class="expiration-vl">02/40</div>
+                            </div>
+                            <div class="cvv">
+                                <label>CVV</label>
+                                <div class="cvv-vl">123</div>
+                            </div>
+                        </div>
+                        <img class="chip" src="imgs\chip.png" alt="chip">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <br>
+        <center><hr class="hrr"></center>
+        <br>
+        <br>
+      
+
+
+
+<script src="js\index.js"></script>
+    <script src="js\shop.js"></script>
+                <script src="js\resersh.js"></script>
+                <script src="js\bootstrap.bundle.min.js"></script>
+</body>
+</html>
